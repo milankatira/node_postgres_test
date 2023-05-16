@@ -1,6 +1,7 @@
-import { cleanEnv, port, str } from 'envalid';
+import { cleanEnv, port, str } from "envalid";
 
 const validateEnv = () => {
+
   cleanEnv(process.env, {
     NODE_ENV: str(),
     PORT: port(),
@@ -10,6 +11,7 @@ const validateEnv = () => {
     POSTGRES_PASSWORD: str(),
     POSTGRES_DB: str(),
   });
+
 };
 
 export default validateEnv;
