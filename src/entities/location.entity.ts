@@ -1,13 +1,21 @@
-import { Entity, Column, PrimaryColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
-@Entity('locations')
+@Entity()
 export class Location {
-  @PrimaryColumn()
-  id: number;
+
+  @PrimaryGeneratedColumn()
+    id: number;
 
   @Column()
-  latitude: number;
+    userId: number;
 
-  @Column()
-  longitude: number;
+  @Column("double precision")
+    latitude: number;
+
+  @Column("double precision")
+    longitude: number;
+
+  @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
+    timestamp: Date;
+
 }

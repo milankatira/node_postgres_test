@@ -1,0 +1,4 @@
+# Ignore built files
+build/*
+public/*
+ecosystem.config.js
