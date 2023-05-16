@@ -45,9 +45,9 @@ AppDataSource.initialize()
     app.use('/api', locationroutes);
 
     // HEALTH CHECKER
-    app.get('/api/healthChecker', async (_, res: Response) => {
+    app.get('/healthChecker', async (_, res: Response) => {
 
-      res.status(200).json({
+      res.json({
         status: 'success',
         message: 'Welcome to Node.js, we are happy to see you',
       });

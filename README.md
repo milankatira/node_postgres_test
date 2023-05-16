@@ -4,8 +4,7 @@
 
 2. Create a .env file in the root directory of the project, and add the necessary environment variables (if any).
 
-3. Install dependencies by running the following 
-
+3. Install dependencies by running the following
 
 ```bash
 nvm use
@@ -19,11 +18,10 @@ npm install
 npm start
 ```
 
-
 4. The server should now be running on http://localhost:8000.
 
-
 #### Scripts
+
 `npm run format` - Format code using Prettier and ESLint
 `npm run format:check` - Check if the code is properly formatted
 `npm run format:write` - Format code and write changes to files
@@ -35,9 +33,8 @@ npm start
 `npm run migrate` - Generate a new migration file using TypeORM CLI and build the project
 `npm run db:push` - Run all pending migrations and build the project
 
-
-
 #### Built With
+
 - `Node.js` - The runtime environment used
 - `Express` - The web framework used
 - `TypeScript` - The language used

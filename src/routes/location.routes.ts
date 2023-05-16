@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import {
   getLocations,
   getLocationById,
@@ -10,8 +10,8 @@ const router = express.Router();
 
 router.get('/locations', getLocations);
 
-router.post('/locations', postLocation);
+router.post('/locations', validateRequestBody, postLocation);
 
-router.get('/locations/:id', validateRequestBody, getLocationById);
+router.get('/locations/:id', getLocationById);
 
 export default router;

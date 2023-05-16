@@ -12,7 +12,7 @@ export const getLocations = async (
   try {
 
     const locations = await locationService.getLocations();
-    res.json(locations);
+    res.status(200).json({ success: true, message: 'Locations fetched successfully', data: locations });
 
   } catch (err) {
 
@@ -36,7 +36,7 @@ export const postLocation = async (
       longitude,
       userId,
     );
-    res.json(result);
+    res.status(201).json({ success: true, message: 'Location created successfully', data: result });
 
   } catch (err) {
 
@@ -56,7 +56,10 @@ export const getLocationById = async (
 
     const id = parseInt(req.params.id) as unknown as number;
     const location = await locationService.getLocationById(id);
-    res.json(location);
+    if (!location) {
+      return res.status(404).json({ success: false, message: 'Location not found' });
+    }
+    res.status(200).json({ success: true, message: 'Location fetched successfully', data: location });
 
   } catch (err) {
 
