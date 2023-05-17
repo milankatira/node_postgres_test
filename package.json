@@ -36,7 +36,7 @@
     "redis": "^4.1.0",
     "reflect-metadata": "^0.1.13",
     "sharp": "^0.30.4",
-    "typeorm": "0.3.6",
+    "typeorm": "0.3.16",
     "zod": "^3.14.4",
 
     "@types/amqplib": "^0.10.1",
